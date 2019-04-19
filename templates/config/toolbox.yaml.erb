@@ -1,6 +1,6 @@
 # For other configuration options, see https://github.com/rubykube/toolbox/blob/master/bin/stress_trading
 
-root-url: http://<%= @config['app']['subdomain'] %>.<%= @config['app']['domain'] %>
+root-url: <%= @config['app']['protocol'] %>://<%= @config['app']['subdomain'] %>.<%= @config['app']['domain'] %>
 
 
 currencies: usd,eur

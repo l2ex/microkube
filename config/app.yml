@@ -1,7 +1,8 @@
 app:
   name: "Microkube"
   domain: "whalemarket.io"
-  subdomain: "www"
+  subdomain: "exchange"
+  protocol: "https"
 ssl:
   enabled: true
   email: "support@whalemarket.io"
@@ -38,7 +39,7 @@ arke:
     pair: 'ETHUSD'
     target:
       driver: rubykube
-      host: 'http://www.app.local'
+      host: 'https://exchange.whalemarket.io'
       name: John
       key: changeme
       secret: changeme
