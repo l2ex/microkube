@@ -1,10 +1,10 @@
 app:
   name: "Microkube"
-  domain: "app.local"
+  domain: "whalemarket.io"
   subdomain: "www"
 ssl:
   enabled: true
-  email: "support@example.com"
+  email: "support@whalemarket.io"
 images:
   peatio: rubykube/peatio:2.0.34
   barong: rubykube/barong:2.0.51
