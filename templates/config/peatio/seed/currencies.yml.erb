@@ -14,85 +14,1602 @@
   position:               1
   options:                {}
 
-- id:                     eth
-  name:                   Ethereum
-  blockchain_key:         eth-rinkeby
-  symbol:                 'Ξ'
-  type:                   coin
+- id:                     btc
+  name:                   Bitcoin
+  symbol:                 B
+  type:                   fiat
   precision:              8
-  base_factor:            1_000_000_000_000_000_000
+  base_factor:            1
   enabled:                true
-  # Deposits with less amount are skipped during blockchain synchronization.
-  # We advise to set value 10 times bigger than the network fee to prevent losses.
-  min_deposit_amount:     0.00021
-  min_collection_amount:  0.00021
-  withdraw_limit_24h:     0.2
-  withdraw_limit_72h:     0.5
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
   deposit_fee:            0
   withdraw_fee:           0
   position:               2
-  options:
-    # ETH tx fees configurations.
-    #
-    # Maximum amount of gas you're willing to spend on a particular transaction.
-    gas_limit: 21_000
-    # Internal price that is paid for running a transaction on the Ethereum network.
-    gas_price: 1_000_000_000
+  options:                {}
 
-- id:                     trst
-  name:                   WeTrust
-  blockchain_key:         eth-rinkeby
-  symbol:                 'Ξ'
-  type:                   coin
+- id:                     eth
+  name:                   Ethereum
+  symbol:                 E
+  type:                   fiat
   precision:              8
-  base_factor:            1_000_000 # IMPORTANT: Don't forget to update this variable according
-  enabled:                true      #            to your ERC20-based currency requirements
-  # Deposits with less amount are skipped during blockchain synchronization.
-  # We advise to set value 10 times bigger than the network fee to prevent losses.
-  # NOTE: Network fee is paid in ETH but min_deposit_amount is in TRST.
-  min_deposit_amount:     0.00021
-  min_collection_amount:  0.00021
-  withdraw_limit_24h:     300      #            (usually can be found on the official website).
-  withdraw_limit_72h:     600
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
   deposit_fee:            0
   withdraw_fee:           0
   position:               3
-  options:
-    # ERC20 tx fees configurations.
-    #
-    # Maximum amount of gas you're willing to spend on a particular transaction.
-    gas_limit: 90_000
-    # Internal price that is paid for running a contract on the Ethereum network.
-    gas_price: 1_000_000_000
-    #
-    # ERC20 configuration.
-    erc20_contract_address: '0x87099add3bcc0821b5b151307c147215f839a110' # Always wrap this value in quotes!
+  options:                {}
 
-- id:                     kyn
-  name:                   Kayen
-  blockchain_key:         eth-rinkeby
-  symbol:                 'K'
-  type:                   coin
+- id:                     xrp
+  name:                   XRP
+  symbol:                 X
+  type:                   fiat
   precision:              8
-  base_factor:            1_000_000 # IMPORTANT: Don't forget to update this variable according
-  enabled:                true      #            to your ERC20-based currency requirements
-  # Deposits with less amount are skipped during blockchain synchronization.
-  # We advise to set value 10 times bigger than the network fee to prevent losses.
-  # NOTE: Network fee is paid in ETH but min_deposit_amount is in TRST.
-  min_deposit_amount:     0.00021
-  min_collection_amount:  0.00021
-  withdraw_limit_24h:     300      #            (usually can be found on the official website).
-  withdraw_limit_72h:     600
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
   deposit_fee:            0
   withdraw_fee:           0
   position:               4
-  options:
-    # ERC20 tx fees configurations.
-    #
-    # Maximum amount of gas you're willing to spend on a particular transaction.
-    gas_limit: 90_000
-    # Internal price that is paid for running a contract on the Ethereum network.
-    gas_price: 1_000_000_000
-    #
-    # ERC20 configuration.
-    erc20_contract_address: '0x4ec07a41b94e035336cca74877319d06964ab76d' # Always wrap this value in quotes!
+  options:                {}
+
+- id:                     bch
+  name:                   Bitcoin Cash
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               5
+  options:                {}
+
+- id:                     ltc
+  name:                   Litecoin
+  symbol:                 L
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               6
+  options:                {}
+
+- id:                     eos
+  name:                   EOS
+  symbol:                 E
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               7
+  options:                {}
+
+- id:                     bnb
+  name:                   Binance Coin
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               8
+  options:                {}
+
+- id:                     usdt
+  name:                   Tether
+  symbol:                 U
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               9
+  options:                {}
+
+- id:                     xlm
+  name:                   Stellar
+  symbol:                 X
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               10
+  options:                {}
+
+- id:                     ada
+  name:                   Cardano
+  symbol:                 A
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               11
+  options:                {}
+
+- id:                     trx
+  name:                   TRON
+  symbol:                 T
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               12
+  options:                {}
+
+- id:                     xmr
+  name:                   Monero
+  symbol:                 X
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               13
+  options:                {}
+
+- id:                     dash
+  name:                   Dash
+  symbol:                 D
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               14
+  options:                {}
+
+- id:                     bsv
+  name:                   Bitcoin SV
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               15
+  options:                {}
+
+- id:                     xtz
+  name:                   Tezos
+  symbol:                 X
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               16
+  options:                {}
+
+- id:                     miota
+  name:                   IOTA
+  symbol:                 M
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               17
+  options:                {}
+
+- id:                     neo
+  name:                   NEO
+  symbol:                 N
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               18
+  options:                {}
+
+- id:                     etc
+  name:                   Ethereum Classic
+  symbol:                 E
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               19
+  options:                {}
+
+- id:                     mkr
+  name:                   Maker
+  symbol:                 M
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               20
+  options:                {}
+
+- id:                     ont
+  name:                   Ontology
+  symbol:                 O
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               21
+  options:                {}
+
+- id:                     xem
+  name:                   NEM
+  symbol:                 X
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               22
+  options:                {}
+
+- id:                     bat
+  name:                   Basic Attention Token
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               23
+  options:                {}
+
+- id:                     zec
+  name:                   Zcash
+  symbol:                 Z
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               24
+  options:                {}
+
+- id:                     vet
+  name:                   VeChain
+  symbol:                 V
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               25
+  options:                {}
+
+- id:                     doge
+  name:                   Dogecoin
+  symbol:                 D
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               26
+  options:                {}
+
+- id:                     btg
+  name:                   Bitcoin Gold
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               27
+  options:                {}
+
+- id:                     rep
+  name:                   Augur
+  symbol:                 R
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               28
+  options:                {}
+
+- id:                     waves
+  name:                   Waves
+  symbol:                 W
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               29
+  options:                {}
+
+- id:                     dcr
+  name:                   Decred
+  symbol:                 D
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               30
+  options:                {}
+
+- id:                     nano
+  name:                   Nano
+  symbol:                 N
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               31
+  options:                {}
+
+- id:                     omg
+  name:                   OmiseGO
+  symbol:                 O
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               32
+  options:                {}
+
+- id:                     qtum
+  name:                   Qtum
+  symbol:                 Q
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               33
+  options:                {}
+
+- id:                     lsk
+  name:                   Lisk
+  symbol:                 L
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               34
+  options:                {}
+
+- id:                     tusd
+  name:                   TrueUSD
+  symbol:                 T
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               35
+  options:                {}
+
+- id:                     rvn
+  name:                   Ravencoin
+  symbol:                 R
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               36
+  options:                {}
+
+- id:                     bcd
+  name:                   Bitcoin Diamond
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               37
+  options:                {}
+
+- id:                     icx
+  name:                   ICON
+  symbol:                 I
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               38
+  options:                {}
+
+- id:                     hot
+  name:                   Holo
+  symbol:                 H
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               39
+  options:                {}
+
+- id:                     bcn
+  name:                   Bytecoin
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               40
+  options:                {}
+
+- id:                     zrx
+  name:                   0x
+  symbol:                 Z
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               41
+  options:                {}
+
+- id:                     link
+  name:                   Chainlink
+  symbol:                 L
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               42
+  options:                {}
+
+- id:                     zil
+  name:                   Zilliqa
+  symbol:                 Z
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               43
+  options:                {}
+
+- id:                     bts
+  name:                   BitShares
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               44
+  options:                {}
+
+- id:                     dgb
+  name:                   DigiByte
+  symbol:                 D
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               45
+  options:                {}
+
+- id:                     iost
+  name:                   IOST
+  symbol:                 I
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               46
+  options:                {}
+
+- id:                     xvg
+  name:                   Verge
+  symbol:                 X
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               47
+  options:                {}
+
+- id:                     npxs
+  name:                   Pundi X
+  symbol:                 N
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               48
+  options:                {}
+
+- id:                     enj
+  name:                   Enjin Coin
+  symbol:                 E
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               49
+  options:                {}
+
+- id:                     ae
+  name:                   Aeternity
+  symbol:                 A
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               50
+  options:                {}
+
+- id:                     sc
+  name:                   Siacoin
+  symbol:                 S
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               51
+  options:                {}
+
+- id:                     ht
+  name:                   Huobi Token
+  symbol:                 H
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               52
+  options:                {}
+
+- id:                     pax
+  name:                   Paxos Standard Token
+  symbol:                 P
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               53
+  options:                {}
+
+- id:                     kmd
+  name:                   Komodo
+  symbol:                 K
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               54
+  options:                {}
+
+- id:                     wtc
+  name:                   Waltonchain
+  symbol:                 W
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               55
+  options:                {}
+
+- id:                     btm
+  name:                   Bytom
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               56
+  options:                {}
+
+- id:                     strat
+  name:                   Stratis
+  symbol:                 S
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               57
+  options:                {}
+
+- id:                     dai
+  name:                   Dai
+  symbol:                 D
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               58
+  options:                {}
+
+- id:                     fct
+  name:                   Factom
+  symbol:                 F
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               59
+  options:                {}
+
+- id:                     abbc
+  name:                   ABBC Coin
+  symbol:                 A
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               60
+  options:                {}
+
+- id:                     snt
+  name:                   Status
+  symbol:                 S
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               61
+  options:                {}
+
+- id:                     gnt
+  name:                   Golem
+  symbol:                 G
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               62
+  options:                {}
+
+- id:                     mco
+  name:                   Crypto.com
+  symbol:                 M
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               63
+  options:                {}
+
+- id:                     ardr
+  name:                   Ardor
+  symbol:                 A
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               64
+  options:                {}
+
+- id:                     gxc
+  name:                   GXChain
+  symbol:                 G
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               65
+  options:                {}
+
+- id:                     theta
+  name:                   Theta Token
+  symbol:                 T
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               66
+  options:                {}
+
+- id:                     ppt
+  name:                   Populous
+  symbol:                 P
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               67
+  options:                {}
+
+- id:                     mona
+  name:                   MonaCoin
+  symbol:                 M
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               68
+  options:                {}
+
+- id:                     wax
+  name:                   WAX
+  symbol:                 W
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               69
+  options:                {}
+
+- id:                     ark
+  name:                   Ark
+  symbol:                 A
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               70
+  options:                {}
+
+- id:                     gusd
+  name:                   Gemini Dollar
+  symbol:                 G
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               71
+  options:                {}
+
+- id:                     nuls
+  name:                   NULS
+  symbol:                 N
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               72
+  options:                {}
+
+- id:                     elf
+  name:                   aelf
+  symbol:                 E
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               73
+  options:                {}
+
+- id:                     maid
+  name:                   MaidSafeCoin
+  symbol:                 M
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               74
+  options:                {}
+
+- id:                     mana
+  name:                   Decentraland
+  symbol:                 M
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               75
+  options:                {}
+
+- id:                     aion
+  name:                   Aion
+  symbol:                 A
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               76
+  options:                {}
+
+- id:                     dgd
+  name:                   DigixDAO
+  symbol:                 D
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               77
+  options:                {}
+
+- id:                     rdd
+  name:                   ReddCoin
+  symbol:                 R
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               78
+  options:                {}
+
+- id:                     r
+  name:                   Revain
+  symbol:                 R
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               79
+  options:                {}
+
+- id:                     xzc
+  name:                   Zcoin
+  symbol:                 X
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               80
+  options:                {}
+
+- id:                     hc
+  name:                   HyperCash
+  symbol:                 H
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               81
+  options:                {}
+
+- id:                     lrc
+  name:                   Loopring
+  symbol:                 L
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               82
+  options:                {}
+
+- id:                     powr
+  name:                   Power Ledger
+  symbol:                 P
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               83
+  options:                {}
+
+- id:                     nas
+  name:                   Nebulas
+  symbol:                 N
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               84
+  options:                {}
+
+- id:                     ela
+  name:                   Elastos
+  symbol:                 E
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               85
+  options:                {}
+
+- id:                     loom
+  name:                   Loom Network
+  symbol:                 L
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               86
+  options:                {}
+
+- id:                     true
+  name:                   TrueChain
+  symbol:                 T
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               87
+  options:                {}
+
+- id:                     dent
+  name:                   Dent
+  symbol:                 D
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               88
+  options:                {}
+
+- id:                     zen
+  name:                   Horizen
+  symbol:                 Z
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               89
+  options:                {}
+
+- id:                     etn
+  name:                   Electroneum
+  symbol:                 E
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               90
+  options:                {}
+
+- id:                     etp
+  name:                   Metaverse ETP
+  symbol:                 E
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               91
+  options:                {}
+
+- id:                     qash
+  name:                   QASH
+  symbol:                 Q
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               92
+  options:                {}
+
+- id:                     wicc
+  name:                   WaykiChain
+  symbol:                 W
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               93
+  options:                {}
+
+- id:                     knc
+  name:                   Kyber Network
+  symbol:                 K
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               94
+  options:                {}
+
+- id:                     wan
+  name:                   Wanchain
+  symbol:                 W
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               95
+  options:                {}
+
+- id:                     pivx
+  name:                   PIVX
+  symbol:                 P
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               96
+  options:                {}
+
+- id:                     bnt
+  name:                   Bancor
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               97
+  options:                {}
+
+- id:                     rlc
+  name:                   iExec RLC
+  symbol:                 R
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               98
+  options:                {}
+
+- id:                     poly
+  name:                   Polymath
+  symbol:                 P
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               99
+  options:                {}
+
+- id:                     tomo
+  name:                   TomoChain
+  symbol:                 T
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               100
+  options:                {}
+
+- id:                     bix
+  name:                   Bibox Token
+  symbol:                 B
+  type:                   fiat
+  precision:              8
+  base_factor:            1
+  enabled:                true
+  min_deposit_amount:     0
+  min_collection_amount:  0
+  withdraw_limit_24h:     0
+  withdraw_limit_72h:     0
+  deposit_fee:            0
+  withdraw_fee:           0
+  position:               101
+  options:                {}

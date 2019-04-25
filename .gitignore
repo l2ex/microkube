@@ -6,6 +6,10 @@ config/toolbox.yaml
 config/traefik.toml
 config/*.env
 config/secrets/*
+compose/*.yaml
+config/arke/*.yaml
+config/gateway/envoy.json
+config/gateway/envoy.yaml
 !config/secrets/.gitkeep
 config/peatio/seed/*
 !config/peatio/seed/.gitkeep
