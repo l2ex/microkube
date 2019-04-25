@@ -29,6 +29,31 @@ jwt: {}
 # JWTs which don't include signatures from all mandatory signers.
 #
 scopes:
+  read_assets:
+    permitted_signers: ['barong']
+    mandatory_signers: ['barong']
+  write_assets:
+    permitted_signers: ['barong']
+    mandatory_signers: ['barong']
+  read_expenses:
+    permitted_signers: ['barong']
+    mandatory_signers: ['barong']
+  write_expenses:
+    permitted_signers: ['barong']
+    mandatory_signers: ['barong']
+  read_revenues:
+    permitted_signers: ['barong']
+    mandatory_signers: ['barong']
+  write_revenues:
+    permitted_signers: ['barong']
+    mandatory_signers: ['barong']
+  read_operations:
+    permitted_signers: ['barong']
+    mandatory_signers: ['barong']
+  write_operations:
+    permitted_signers: ['barong']
+    mandatory_signers: ['barong']
+
   read_deposits:
     permitted_signers: ['barong']
     mandatory_signers: ['barong']
@@ -42,5 +67,8 @@ scopes:
     permitted_signers: ['barong']
     mandatory_signers: ['barong']
   read_accounts:
+    permitted_signers: ['barong']
+    mandatory_signers: ['barong']
+  write_accounts:
     permitted_signers: ['barong']
     mandatory_signers: ['barong']
